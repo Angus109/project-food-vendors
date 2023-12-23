@@ -7,28 +7,11 @@ import {
 } from "firebase/auth";
 import { doc, getDoc, getDocs, getFirestore, setDoc, collection, where, query, updateDoc } from "firebase/firestore";
 import { getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
-
+import firbasecongig.js from "./firebaseconfig";
 import uuid from "react-native-uuid";
-
-
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyClQ9KYYXpmBrgHrrV5TGCWdZ535QIPq2A",
-  authDomain: "project--food.firebaseapp.com",
-  projectId: "project--food",
-  storageBucket: "project--food.appspot.com",
-  messagingSenderId: "317654471801",
-  appId: "1:317654471801:web:b77bf5a1293136fae3f0a8",
-  measurementId: "G-H48RVZPP9H"
-};
-
-
-
 // Initialize Firebase, check whether FireBase has been init
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 const auth = getAuth();
